@@ -43,6 +43,12 @@ Also there's a `URLC` status endpoint, where notifications from Dotpay are sent 
 
 Przelewy24 integration is based partially on a PHP exaple on their [website](https://www.przelewy24.pl/pobierz#instalacja). Work in progress...
 
-#### Configuration
+### Configuration
 In order to run it on your own, you have to register a sandbox account (for example on Dotpay website),
 then do the proper configuration in `application.properties`.
+
+##### Others
+There's an utility in `others/urlc-receiver.php` designed to log all POST data from Dotpay.
+It's useful when you have Spring Boot on localhost. You can upload the file to any free public
+web hosting, set Dotpay `URLC` to point at the file
+ and then copy the POST data and trigger your localhost endpoint manually.
